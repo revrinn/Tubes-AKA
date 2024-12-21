@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+// Fungsi rekursif untuk menghitung total jam belajar
+func akumulasi(jamBelajar []int, N int) int {
+    if N == 0 {
+        return 0 // Basis rekursi: jika tidak ada elemen
+    }
+    return jamBelajar[N-1] + akumulasi(jamBelajar, N-1) // Rekursi
+}
+
+func main() {
+    // Contoh input: array jam belajar
+    jamBelajar := []int{5, 7, 8, 6, 10} // Jam belajar selama 5 hari
+    N := len(jamBelajar) // Jumlah elemen dalam array
+
+    // Hitung total jam belajar menggunakan fungsi rekursif
+    totalJam := akumulasi(jamBelajar, N)
+
+    // Cetak hasil total jam belajar
+    fmt.Println("Total Jam Belajar:", totalJam)
+}

@@ -1,0 +1,22 @@
+package main
+import "fmt"
+
+// Fungsi untuk menghitung total jam belajar dengan metode iteratif
+func TotalJamBelajarIteratif(jamBelajar []int, N int) int {
+    total := 0
+    for i := 0; i < N; i++ {
+        total += jamBelajar[i]
+    }
+    return total
+}
+func main() {
+    // Contoh input jam belajar
+    jamBelajar := []int{5, 7, 8, 6, 10} // Misalnya 5 hari belajar
+    N := 5 // Jumlah elemen dalam array yang ditentukan manual
+
+    // Panggil fungsi untuk menghitung total jam belajar
+    totalJam := TotalJamBelajarIteratif(jamBelajar, N)
+
+    // Cetak hasil total jam belajar
+    fmt.Println("Total Jam Belajar:", totalJam)
+}
